@@ -13,3 +13,12 @@
 # Assertion messages may be unclear about what they display in some languages. 
 # If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 
+def duplicate_encode(word):
+    word = word.lower() #konwertuje na małe litery
+    napis = '' #tworze putego stringa
+    for i in word: #iteruje po całym napisie
+        if word.count(i) > 1: #na początku sprawdzam ile razy się pojawia litera w napisie
+            napis += ')'
+        else:
+            napis += '('
+    return napis
